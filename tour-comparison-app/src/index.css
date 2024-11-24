@@ -23,38 +23,92 @@ a:hover {
 }
 
 body {
+  font-family: Arial, sans-serif;
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  padding: 0;
+  background-color: hsl(253, 100%, 14%);
+  color: #91b9ff;
 }
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  text-align: center;
 }
 
-button {
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(1fr, 1fr));
+  gap:10px;
+  padding: 10px;
+}
+
+.tour-card{
+  background-color: #91b9ff;
+  border: 1px #06366d;
   border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+}
+
+.tour-card:hover {
+  transform: translateY(-5px);
+}
+
+.tour-image {
+  max-width: 100%;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.tour-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color:#28163b;
+}
+
+.tour-price {
+  font-size: 1.2rem;
+  color: #282f2b;
+}
+
+
+button {
+  border-radius: 2px;
+  border: none;
+  padding: 6px 8px;
+  margin: 5px;
   cursor: pointer;
-  transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #646cff;
+  opacity: 0.7;
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
+.remove-button {
+  background-color: #3e006e;
+  color: white;
+}
+
+.view-button {
+  background-color: #35094f;
+  color: white;
+}
+
+.tour-description{
+  font-family: 'Times New Roman', Times, serif;
+  margin: 0;
+  padding: 0;
+  color: #28163b;
+}
+
+@media (prefers-color-scheme: dark) {
   :root {
     color: #213547;
     background-color: #ffffff;
@@ -64,5 +118,8 @@ button:focus-visible {
   }
   button {
     background-color: #f9f9f9;
+  }
+  .gallery-container {
+    grid-template-columns: 1fr;
   }
 }

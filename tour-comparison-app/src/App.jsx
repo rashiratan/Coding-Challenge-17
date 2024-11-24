@@ -8,6 +8,7 @@ function App() {
 
   return (
       <div>
+        <h1>Tour Comparison App</h1>
         <Gallery 
         tours = {tours}
         setTours = {setTours}

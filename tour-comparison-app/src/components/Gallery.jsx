@@ -54,19 +54,20 @@ if (error) {
 }
 
 return (
-    <div>
+    <div className='gallery'>
         {tours.map(tour => (
-            <div key={tour.id}> {/*display tour details */}
-            <p>Tour Name: {tour.name}</p>
-            <p>Price: {tour.price}</p>
-            <img src={tour.image} alt={tour.name} />
+            <div className= 'tour-card' key={tour.id}> {/*display tour details */}
+            <p className='tour-title'> {tour.name}</p>
+            <p className='tour-price'>Price: ${tour.price}</p>
+            <img className='tour-image' src={tour.image} alt={tour.name} />
             <br />
             <ViewMore 
             description= {tour.info} 
             isVisible={visibleTours[tour.id] || false} 
             setIsVisible={() => handleToggleVisibility(tour.id)}  
             /> {/*passing props for View More component */}
-            <button onClick={()=> HandleRemove(tour.id, tours, setTours)}>Not Interested</button> {/*passing required proprs to HandleRemove component */}
+            <br />
+            <button className='remove-button' onClick={()=> HandleRemove(tour.id, tours, setTours)}>Not Interested</button> {/*passing required proprs to HandleRemove component */}
             </div>
 
 
