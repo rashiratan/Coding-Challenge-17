@@ -7,7 +7,6 @@ function App() {
   const [visibleTours, setVisibleTours] = useState({}); //global state required in multiple components
 
   return (
-    <>
       <div>
         <Gallery 
         tours = {tours}
@@ -16,8 +15,6 @@ function App() {
         setVisibleTours = {setVisibleTours} //passing required states as props
         />
       </div>
-      
-    </>
   )
 }
 
