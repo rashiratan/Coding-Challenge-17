@@ -12,7 +12,7 @@ const [error, setError] = useState(null); //state to display errors
 
    useEffect(() => {
     const apiUrl = 'https://course-api.com/react-tours-project'; 
-    const proxyUrl = 'https://cors-anywhere.herokuapp.com/'; //using cors to prevent access issues
+    const proxyUrl = 'https://cors-anywhere.com/'; //using cors to prevent access issues
     fetch(proxyUrl + apiUrl)
     .then(response => {
         if (!response.ok) {
